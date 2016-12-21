@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 
+var runSequence = require('run-sequence');
 var inject = require('./gulp/inject.js');
 
 
