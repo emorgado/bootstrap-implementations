@@ -1,0 +1,36 @@
+.my-select {
+    border: 1px solid #787878;
+    overflow-y: auto;
+    border-radius: 3px;
+}
+.my-select p {
+    border-bottom: 1px dotted #787878;
+    margin: 0;
+    position: relative;
+    margin-left: 3px;
+}
+.my-select input {
+
+}
+.my-select label {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    font-weight: normal;
+}
+.my-select label:hover {
+    background-color: #4c9ed9;
+}
+
+.row {
+    border: 1px solid red;
+}
+.r {
+    background-color: red;
+}
+.g {
+    background-color: green;
+}
+.b {
+    background-color: blue;
+}

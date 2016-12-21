@@ -3,31 +3,48 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <base href="/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Testes com angular</title>
 
     <!-- build:css css/application.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- endinject -->
 
     <!-- inject:css -->
+    <link rel="stylesheet" href="app.css">
     <!-- endinject -->
     <!-- endbuild -->
   </head>
   <body>
 
       <div class="container">
+          <h1>Aplicação de testes</h1>
 
-          
+          <div ng-view>Carregando Aguarde...</div>
 
       </div>
       <!-- build:js scripts/application.js -->
       <!-- bower:js -->
 
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+
+      <script src="bower_components/angular/angular.js"></script>
+
+      <script src="bower_components/angular-route/angular-route.js"></script>
+
+      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+      <script src="bower_components/angular-messages/angular-messages.js"></script>
+
       <!-- endinject -->
 
       <!-- inject:js -->
+      <script src="app/home/homeModule.js"></script>
+      <script src="app/home/homeCtrl.js"></script>
       <script src="app/app.js"></script>
       <!-- endinject -->
       <!-- endbuild -->

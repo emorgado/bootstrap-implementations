@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<h2>Componente de seleção multipla</h2>
+<form class="" >
+
+    <div class="row">
+
+      <div class="form-group col-sm-4" ng-class="{'has-error': form.empresas.$invalid && form.name.$dirty}">
+        <label for="empresas" class="control-label">Empresas multiselect</label>
+        <select name="empresas"
+                ng-model="vm.empresas"
+                ng-options="item as item.nome for item in vm.empresasDisponiveis"
+                multiple="true"
+                class="form-control"></select>
+        <div ng-messages="form.empresas.$error" ng-show="form.empresas.$invalid && form.empresas.$dirty">
+            <p ng-message="required" class="help-block">Informe o label!</p>
+        </div>
+      </div>
+      <div class="form-group col-sm-4" ng-class="{'has-error': form.empresas.$invalid && form.name.$dirty}">
+        <label for="empresas" class="control-label">Empresas check</label>
+
+        <div class="form-control-static row" >
+           <p class="col-md-4"  ng-repeat="empresa in vm.empresasDisponiveis">
+               <input type="checkbox"
+                      name="empresa.{{empresa.id}}"
+                      value="{{empresa.id}}"
+                     ng-click="vm.seleciona( empresa )"
+                    />
+                <span>{{empresa.nome}}</span>
+            </p>
+
+        </div>
+
+        <div ng-messages="form.empresas.$error" ng-show="form.empresas.$invalid && form.empresas.$dirty">
+            <p ng-message="required" class="help-block">Informe o label!</p>
+        </div>
+      </div>
+
+      <div class="form-group col-sm-4" ng-class="{'has-error': form.empresas.$invalid && form.name.$dirty}">
+        <label for="empresas" class="control-label">Empresas Div com checks</label>
+
+        <div class="form-control-static my-select" style="height: 100px;">
+           <p class=""  ng-repeat="empresa in vm.empresasDisponiveis">
+               <label>
+               <input type="checkbox"
+                      name="empresa.{{empresa.id}}"
+                      value="{{empresa.id}}"
+                     ng-click="vm.seleciona( empresa )"
+                    />
+
+                    {{empresa.nome}}</label>
+            </p>
+
+        </div>
+
+        <div ng-messages="form.empresas.$error" ng-show="form.empresas.$invalid && form.empresas.$dirty">
+            <p ng-message="required" class="help-block">Informe o label!</p>
+        </div>
+      </div>
+
+      <pre>
+      Empresas disponíveis
+      {{vm.empresasDisponiveis | json }}
+
+      Empresas selecionadas
+      {{vm.empresas|json}}
+      </pre>
+
+    </div>
+</form>
+
+<h5>Funcionamento do modelo de grid do bootstrap</h5>
+<div class="row">
+    <div class="col-md-1">
+        &nbsp;
+    </div>
+    <div class="col-md-2 r">
+        &nbsp;
+    </div>
+    <div class="col-md-5 g">
+        &nbsp;
+    </div>
+    <div class="col-md-3 b">
+        &nbsp;
+    </div>
+    <div class="col-md-1 ">
+        &nbsp;
+    </div>
+</div>
+
+<br>
