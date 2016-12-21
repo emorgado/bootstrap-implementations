@@ -1,0 +1,21 @@
+{
+  "name": "angular-implementations",
+  "description": "Teste de formas de obter valores de componentes com angular",
+  "main": "index.js",
+  "authors": [
+    "Emerson Morgado"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular-messages": "^1.6.0"
+  }
+}
